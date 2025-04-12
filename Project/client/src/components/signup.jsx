@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth, db } from "./firebase";
+import { auth, db } from "../../firebase.js";
 import { toast } from "react-toastify";
 import { setDoc, doc } from "firebase/firestore";
 import googleIcon from "../google.png";
