@@ -54,7 +54,7 @@ function Homepage() {
           <div className="hero-buttons">
             <button>File FIR</button>
             <button>Track Case</button>
-            <button>ShastraBot</button>
+            <button onClick={() => navigate('/chatbot')}>NyayMitra</button>
           </div>
         </div>
       </div>

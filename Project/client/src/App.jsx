@@ -12,6 +12,8 @@ import {
 import Login from "./components/login.jsx";
 import SignUp from "./components/register.jsx";
 import Homepage from "./components/Homepage.jsx";
+import Chatbot from "./components/Chatbot.jsx";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../firebase.js";
@@ -28,7 +30,9 @@ function AppWrapper() {
   }, []);
 
   const isAuthPage =
-    location.pathname === "/login" || location.pathname === "/register" || location.pathname === "/";
+    location.pathname === "/login" ||
+    location.pathname === "/register" ||
+    location.pathname === "/";
 
   return (
     <div className="App">
@@ -48,6 +52,7 @@ function AppWrapper() {
       ) : (
         <Routes>
           <Route path="/Homepage" element={<Homepage />} />
+          <Route path="/chatbot" element={<Chatbot />} /> {/* ✅ New */}
         </Routes>
       )}
       <ToastContainer />
