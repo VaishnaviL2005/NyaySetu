@@ -4,6 +4,7 @@ import { auth } from "../../firebase.js";
 import { toast } from "react-toastify";
 import SignInwithGoogle from "./signup.jsx";
 import { useNavigate, Link } from "react-router-dom";
+import '../index.css';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ function Login() {
       toast.success("User logged in Successfully", {
         position: "top-center",
       });
-      navigate("/profile");
+      navigate("/Homepage");
     } catch (error) {
       console.log(error.message);
       toast.error(error.message, {

@@ -1,0 +1,257 @@
+
+/* Reset some basic stuff */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfcf7;
+    color: #333;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: black;
+    color: goldenrod;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links a {
+    color: goldenrod;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .navbar .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero section */
+  /* Hero Carousel */
+  .hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+  
+  .hero-image.active {
+    opacity: 1;
+  }
+  
+  .hero-overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+    max-width: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons button {
+    background-color: goldenrod;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: darkgoldenrod;
+  }
+  
+  /* Features Section */
+  /* Features Section */
+  .features {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #333, #111); /* Gradient for a dynamic feel */
+    color: white; /* Change text color to white for contrast */
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: goldenrod; /* Make the title stand out */
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between feature items */
+  }
+  
+  .feature-item {
+    width: 30%;
+    background-color: #222; /* Dark background for each feature item */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow to stand out */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  }
+  
+  .feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: goldenrod; /* Highlight feature titles */
+  }
+  
+  .feature-item p {
+    font-size: 16px;
+    color: #ccc; /* Light gray text for descriptions */
+  }
+  
+  /* Button styling for the feature items (optional) */
+  .feature-item button {
+    background-color: goldenrod;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feature-item button:hover {
+    background-color: darkgoldenrod;
+  }
+  
+  
+  /* About Section */
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #333, #111); /* Matching gradient background */
+    color: white; /* Change text color for contrast */
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: goldenrod; /* Highlight the section title */
+  }
+  
+  .about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc; /* Light gray for text */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #333, #111); /* Matching gradient background */
+    color: white; /* Ensure text is legible against dark background */
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: goldenrod; /* Highlight the section title */
+  }
+  
+  .contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc; /* Light gray text */
+  }
+  
+  /* Contact form styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Darker border to match the theme */
+    border-radius: 5px;
+    background-color: #222; /* Dark background for input fields */
+    color: white; /* White text for inputs */
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+  }
+  
+  .contact-form button {
+    padding: 12px 25px;
+    background-color: goldenrod;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: darkgoldenrod;
+  }
+  

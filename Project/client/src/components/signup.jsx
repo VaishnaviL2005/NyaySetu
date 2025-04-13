@@ -3,7 +3,8 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, db } from "../../firebase.js";
 import { toast } from "react-toastify";
 import { setDoc, doc } from "firebase/firestore";
-import googleIcon from "../google.png";
+import googleIcon from "../assets/google.png";
+import '../index.css';
 
 function SignInwithGoogle() {
   function googleLogin() {
@@ -21,7 +22,7 @@ function SignInwithGoogle() {
         toast.success("User logged in Successfully", {
           position: "top-center",
         });
-        window.location.href = "/profile";
+        window.location.href = "/Homepage";
       }
     });
   }

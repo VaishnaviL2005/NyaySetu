@@ -26,7 +26,7 @@ function Register() {
       toast.success("User registered successfully!", {
         position: "top-center",
       });
-      navigate("/profile");
+      navigate("/Homepage");
     } catch (error) {
       console.log(error.message);
       toast.error(error.message, {
@@ -78,7 +78,7 @@ function Register() {
       </div>
 
       <p className="forgot-password text-right">
-        Already registered? <Link to="/">Login here</Link>
+        Already registered? <Link to="/login">Login here</Link>
       </p>
     </form>
   );
