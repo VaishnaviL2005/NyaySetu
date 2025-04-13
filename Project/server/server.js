@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-
+import aiRoutes from './routes/aiRoutes.js';
 dotenv.config();
 
 const app = express();
@@ -24,6 +24,10 @@ app.use(express.static('client/build'));
 app.get('/api', (req, res) => {
   res.json({ message: 'Hello from Express API!' });
 });
+
+// Routes
+app.use('/api/ai', aiRoutes);
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
