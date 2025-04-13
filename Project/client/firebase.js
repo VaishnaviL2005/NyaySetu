@@ -1,10 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
 // import { getAnalytics } from "firebase/analytics";
 
+
+
+// Firebase configuration from your Firebase Console
 const firebaseConfig = {
-  // For Firebase JS SDK v7.20.0 and later
+  //Firebase key
 };
 
 // Initialize Firebase

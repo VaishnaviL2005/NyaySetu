@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -15,7 +15,7 @@ import Profile from "./components/profile.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { auth } from "./components/firebase";
+import { auth } from "../firebase.js";
 
 function App() {
   const [user, setUser] = useState(null);
