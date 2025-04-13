@@ -77,11 +77,11 @@ npm install
 npm start
 ```
 
-The app will run at a localhost. 
+The app will run at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🤖 Example Prompt for NyayMitra
+## 🤖 Example Prompt for NyayMitra (AI ChatBot)
 
 > "Someone stole my mobile phone in the bus."
 
