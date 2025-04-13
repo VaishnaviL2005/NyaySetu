@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../Chatbot.css';
-import axios from 'axios';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
@@ -9,48 +8,31 @@ const Chatbot = () => {
   const [userInput, setUserInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleUserMessage = async () => {
+  // Function to handle user message submission
+  const handleUserMessage = () => {
     if (userInput.trim()) {
-      // Add user message and temporary typing placeholder
-      const newMessages = [
+      setMessages([
         ...messages,
         { text: userInput, sender: 'user' },
-        { text: 'Typing...', sender: 'bot' },
-      ];
-      setMessages(newMessages);
+        { text: 'Typing...', sender: 'bot' }, // Temporary typing indicator
+      ]);
       setUserInput('');
       setIsTyping(true);
 
-      try {
-        const response = await axios.post('http://localhost:5000/gemini/chat', {
-          prompt: userInput,
-        });
-
-        const botReply = response.data.response;
-
-        // Replace "Typing..." with actual bot response
-        setMessages((prevMessages) => [
-          ...prevMessages.slice(0, -1), // remove last "Typing..."
-          { text: botReply, sender: 'bot' },
-        ]);
-      } catch (error) {
-        console.error("Error from Gemini backend:", error);
+      // Simulating a bot response
+      setTimeout(() => {
         setMessages((prevMessages) => [
           ...prevMessages.slice(0, -1),
-          { text: 'Sorry, something went wrong. Please try again.', sender: 'bot' },
+          { text: 'I am here to help you!', sender: 'bot' },
         ]);
-      } finally {
         setIsTyping(false);
-      }
+      }, 1500); // Simulate response delay
     }
   };
 
+  // Function to handle input change
   const handleInputChange = (e) => {
     setUserInput(e.target.value);
-  };
-
-  const handleQuickAction = (text) => {
-    setUserInput(text);
   };
 
   return (
@@ -87,9 +69,9 @@ const Chatbot = () => {
 
       {/* Quick Actions Section */}
       <div className="quick-actions">
-        <button onClick={() => handleQuickAction('How do I file an FIR?')}>Ask a Question</button>
-        <button onClick={() => handleQuickAction('I need legal help.')}>Help</button>
-        <button onClick={() => handleQuickAction('What is Section 379 IPC?')}>FAQ</button>
+        <button>Ask a Question</button>
+        <button>Help</button>
+        <button>FAQ</button>
       </div>
     </div>
   );
