@@ -1,0 +1,143 @@
+.track-container {
+    padding: 2rem;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #daa520;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem 1rem;
+    width: 300px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .search-bar button {
+    background-color: #daa520;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-tabs button {
+    background: #333;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .filter-tabs .active,
+  .filter-tabs button:hover {
+    background-color: #daa520;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .case-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .case-card {
+    background: #1f1f1f;
+    border: 1px solid #444;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .case-card:hover {
+    transform: scale(1.01);
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .status.resolved {
+    color: #4caf50;
+  }
+  
+  .status.pending {
+    color: #ffeb3b;
+  }
+  
+  .status.in-progress {
+    color: #03a9f4;
+  }
+  
+  .status.rejected {
+    color: #f44336;
+  }
+  
+  progress {
+    width: 100%;
+    height: 12px;
+    border-radius: 8px;
+    margin-top: 0.25rem;
+    appearance: none;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: #444;
+    border-radius: 8px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #daa520;
+    border-radius: 8px;
+  }
+  
+  .track-btn {
+    margin-top: 1rem;
+    background-color: #daa520;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .doc-link {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: #77ddff;
+    text-decoration: underline;
+  }
+  
+  .no-result {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  

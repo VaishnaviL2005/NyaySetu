@@ -13,6 +13,8 @@ import Login from "./components/login.jsx";
 import SignUp from "./components/register.jsx";
 import Homepage from "./components/Homepage.jsx";
 import Chatbot from "./components/Chatbot.jsx";
+import FIRform from "./components/FIRform.jsx";
+import TrackCase from "./components/Trackcase.jsx";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,7 +54,9 @@ function AppWrapper() {
       ) : (
         <Routes>
           <Route path="/Homepage" element={<Homepage />} />
-          <Route path="/chatbot" element={<Chatbot />} /> {/* ✅ New */}
+          <Route path="/chatbot" element={<Chatbot />} /> 
+          <Route path="/firform" element={<FIRform />} /> 
+          <Route path="/trackcase" element={<TrackCase />} /> 
         </Routes>
       )}
       <ToastContainer />

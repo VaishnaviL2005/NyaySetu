@@ -1,9 +1,10 @@
-\/* Basic Reset */
-.chatbot-body {
+.chatbot-page {
   font-family: 'Segoe UI', sans-serif;
-  background-color: black; /* Black background */
-  color: #fdfcf7; /* Text color to match the homepage */
+  background: linear-gradient(130deg, #3c2f2f, #6d4c41, #a1887f);
+  color: #1e3d2f;
+  min-height: 100vh;
   margin: 0;
+  background-attachment: fixed; /* Subtle parallax-like effect */
 }
 
 /* Chatbot Page Container */

@@ -52,8 +52,8 @@ function Homepage() {
           <h1>Justice. Technology. India.</h1>
           <p>Empowering Citizens with smart legal systems.</p>
           <div className="hero-buttons">
-            <button>File FIR</button>
-            <button>Track Case</button>
+            <button onClick={() => navigate('/firform')}>File FIR</button>
+            <button onClick={() => navigate('/trackcase')}>Track Case</button>
             <button onClick={() => navigate('/chatbot')}>NyayMitra</button>
           </div>
         </div>

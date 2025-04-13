@@ -1,6 +1,6 @@
 // FIRForm.jsx
 import React, { useState } from 'react';
-import './FIRForm.css';
+import '../FIRForm.css';
 
 const FIRForm = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +32,7 @@ const FIRForm = () => {
   return (
     <div className="fir-form-page">
       <div className="fir-header">
-        <h2>File a FIR</h2>
+        <h2></h2>
       </div>
 
       <form className="fir-form" onSubmit={handleSubmit}>
